@@ -1,17 +1,62 @@
 {
   "participant_id": {
-    "Description": "Unique participant label"
+    "Description": "Unique participant label",
+    "Annotations": {
+      "IsAbout": {
+        "TermURL": "nb:ParticipantID",
+        "Label": "Participant ID"
+      },
+      "VariableType": "Identifier"
+    }
   },
   "Gender": {
     "Description": "Participant gender",
     "Levels": {
       "F": "female",
       "M": "male"
+    },
+    "Annotations": {
+      "IsAbout": {
+        "TermURL": "nb:Sex",
+        "Label": "Sex"
+      },
+      "VariableType": "Categorical",
+      "Levels": {
+        "M": {
+          "TermURL": "snomed:248153007",
+          "Label": "Male"
+        },
+        "F": {
+          "TermURL": "snomed:248152002",
+          "Label": "Female"
+        }
+      },
+      "MissingValues": []
     }
   },
   "Age": {
     "Description": "Participant age (years)",
-    "Units": "years"
+    "Units": "years",
+    "Annotations": {
+      "IsAbout": {
+        "TermURL": "nb:Age",
+        "Label": "Age"
+      },
+      "VariableType": "Continuous",
+      "Format": {
+        "TermURL": "nb:FromFloat",
+        "Label": "float"
+      },
+      "MissingValues": [
+        "n/a",
+        "N/A",
+        "na",
+        "NA",
+        "nan",
+        "NaN",
+        ""
+      ]
+    }
   },
   "Group": {
     "Description": "Participant group label"
@@ -31,7 +76,7 @@
     "Description": "Spelling recognition (Andrews & Hersch, 2010)"
   },
   "PIAT": {
-    "Description": "Peabody Individual Achievement Test—Revised (PIAT-R): (Markwardt, 1989)"
+    "Description": "Peabody Individual Achievement Test\u2014Revised (PIAT-R): (Markwardt, 1989)"
   },
   "FS": {
     "Description": "FS reproduction test (VL2 FS test; Morere & Allen, 2012)"
